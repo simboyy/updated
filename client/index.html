@@ -10,35 +10,25 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="kendoui/styles/kendo.common.min.css">
     <link rel="stylesheet" href="kendoui/styles/kendo.common.min.map.css">
     <link rel="stylesheet" href="kendoui/styles/kendo.default.min.css">
     <link rel="stylesheet" href="kendoui/styles/kendo.material.min.css">
-    <link rel="stylesheet" href="kendoui/styles/kendo.silver.mobile.min.css">
-    
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(client) app/vendor.css -->
-
-      <!-- bower:css -->
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-      <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-      <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
-      <link rel="stylesheet" href="bower_components/material-date-picker/build/styles/mbdatepicker.css" />
-      <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" />
-      <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.css" />
-      <link rel="stylesheet" href="bower_components/smDateTimeRangePicker/src/picker.css" />
-      <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
-      <link rel="stylesheet" href="bower_components/angular-bootstrap-simple-chat/src/css/style.css" />
-      <link rel="stylesheet" href="bower_components/angular-simple-chat/dist/angular-simple-chat.min.css" />
-      <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.css" />
-      <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
-      <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css" />
-      <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,client}) app/app.css -->
-      <link rel="stylesheet" href="app/app.css">
-      <!-- injector:css -->
+    <link rel="stylesheet" href="kendoui/styles/kendo.silver.mobile.min.css">  
+      <link rel="stylesheet" href="resources/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="resources/angular-material/angular-material.css" />
+      <link rel="stylesheet" href="resources/angular-material-icons/angular-material-icons.css" />
+      <link rel="stylesheet" href="resources/material-date-picker/build/styles/mbdatepicker.css" />
+      <link rel="stylesheet" href="resources/angularjs-slider/dist/rzslider.css" />
+      <link rel="stylesheet" href="resources/angular-ui-tree/dist/angular-ui-tree.css" />
+      <link rel="stylesheet" href="resources/smDateTimeRangePicker/src/picker.css" />
+      <link rel="stylesheet" href="resources/sweetalert/dist/sweetalert.css" />
+      <link rel="stylesheet" href="resources/angular-bootstrap-simple-chat/src/css/style.css" />
+      <link rel="stylesheet" href="resources/angular-simple-chat/dist/angular-simple-chat.min.css" />
+      <link rel="stylesheet" href="resources/sweetalert2/dist/sweetalert2.css" />
+      <link rel="stylesheet" href="resources/fullcalendar/dist/fullcalendar.css" />
+      <link rel="stylesheet" href="resources/bootstrap-daterangepicker/daterangepicker.css" />     
+      <link rel="stylesheet" href="app/app.css">  
       <link rel="stylesheet" href="app/account/password/forgot.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
@@ -96,10 +86,7 @@
       <link rel="stylesheet" href="components/submit-button/submit-button.css">
       <link rel="stylesheet" href="components/top-menu/megamenu.css">
       <link rel="stylesheet" href="components/user-avatar/user-avatar.css">
-      <!-- endinjector -->
-    <!-- endbuild -->
-
-  </head>
+     </head>
   <body ng-app="mediaboxApp">
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -123,235 +110,226 @@
 
 
     <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="resources/es5-shim/es5-shim.js" type="text/javascript"></script>
+    <script src="resources/json3/lib/json3.min.js" type="text/javascript"></script>
     <![endif]-->
-    <!-- build:js({client,node_modules}) app/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-      <script src="bower_components/lodash/lodash.js"></script>
-      <script src="bower_components/angular-socket-io/socket.js"></script>
-      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
-      <script src="bower_components/angular-animate/angular-animate.js"></script>
-      <script src="bower_components/angular-aria/angular-aria.js"></script>
-      <script src="bower_components/angular-messages/angular-messages.js"></script>
-      <script src="bower_components/angular-material/angular-material.js"></script>
-      <script src="bower_components/moment/moment.js"></script>
-      <script src="bower_components/angular-moment/angular-moment.js"></script>
-      <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
-      <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-      <script src="bower_components/blob-polyfill/Blob.js"></script>
-      <script src="bower_components/file-saver.js/FileSaver.js"></script>
-      <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
-      <script src="bower_components/material-date-picker/build/mbdatepicker.js"></script>
-      <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
-      <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-      <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
-      <script src="bower_components/spin.js/spin.js"></script>
-      <script src="bower_components/angular-loading/angular-loading.js"></script>
-      <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
-      <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
-      <script src="bower_components/odometer/odometer.js"></script>
-      <script src="bower_components/angular-odometer-js/dist/angular-odometer.js"></script>
-      <script src="bower_components/smDateTimeRangePicker/src/picker.js"></script>
-      <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-      <script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
-      <script src="bower_components/angular-base64-upload/src/angular-base64-upload.js"></script>
-      <script src="bower_components/angular-bootstrap-simple-chat/src/scripts/index.js"></script>
-      <script src="bower_components/angular-simple-chat/dist/angular-simple-chat.min.js"></script>
-      <script src="bower_components/angular-touch/angular-touch.js"></script>
-      <script src="bower_components/venturocket-angular-slider/build/angular-slider.js"></script>
-      <script src="bower_components/datetimeRangePicker/range-picker.js"></script>
-      <script src="bower_components/sweetalert2/dist/sweetalert2.js"></script>
-      <script src="bower_components/chart.js/dist/Chart.js"></script>
-      <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
-      <script src="bower_components/ng-onload/release/ng-onload.js"></script>
-      <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
-      <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
-      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-      <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-      <script src="bower_components/angular-daterangepicker/js/angular-daterangepicker.js"></script>
-      <!-- endbower -->
-      <script src="socket.io-client/socket.io.js"></script>
-    <!-- endbuild -->
-    <!-- build:js(.tmp) app/app.js -->
-      <script src="app/app.js"></script>
-      <!-- injector:js -->
-      <script src="app/admin/admin.module.js"></script>
-      <script src="components/auth/auth.module.js"></script>
-      <script src="components/util/util.module.js"></script>
-      <script src="app/about/about.js"></script>
-      <script src="app/account/account.js"></script>
-      <script src="app/account/cp/cp.controller.js"></script>
-      <script src="app/account/login/login.controller.js"></script>
-      <script src="app/account/password/password.controller.js"></script>
-      <script src="app/account/signup/signup.controller.js"></script>
-      <script src="app/address/address.controller.js"></script>
-      <script src="app/address/address.js"></script>
-      <script src="app/admin/admin.controller.js"></script>
-      <script src="app/admin/admin.router.js"></script>
-      <script src="app/app.constant.js"></script>
-      <script src="app/book/book.controller.js"></script>
-      <script src="app/book/book.js"></script>
-      <script src="app/brand/brand.controller.js"></script>
-      <script src="app/brand/brand.js"></script>
-      <script src="app/brandmg/brandmg.controller.js"></script>
-      <script src="app/brandmg/brandmg.js"></script>
-      <script src="app/brandtv/brandtv.controller.js"></script>
-      <script src="app/brandtv/brandtv.js"></script>
-      <script src="app/campaign/campaign.controller.js"></script>
-      <script src="app/campaign/campaign.js"></script>
-      <script src="app/campaign/campaignCompleted.controller.js"></script>
-      <script src="app/campaign/campaignRunning.controller.js"></script>
-      <script src="app/campaign/campaignScheduled.controller.js"></script>
-      <script src="app/campaigns/calendar.controller.js"></script>
-      <script src="app/campaigns/campaigns.controller.js"></script>
-      <script src="app/campaigns/campaigns.js"></script>
-      <script src="app/campaigns/campaignsCompleted.controller.js"></script>
-      <script src="app/campaigns/campaignsRunning.controller.js"></script>
-      <script src="app/campaigns/campaignsScheduled.controller.js"></script>
-      <script src="app/cart/cart.controller.js"></script>
-      <script src="app/cart/cart.js"></script>
-      <script src="app/category/category.controller.js"></script>
-      <script src="app/category/category.js"></script>
-      <script src="app/category/detail.controller.js"></script>
-      <script src="app/category/list.controller.js"></script>
-      <script src="app/category/main.controller.js"></script>
-      <script src="app/checkout/checkout.controller.js"></script>
-      <script src="app/checkout/checkout.js"></script>
-      <script src="app/contact/contact.controller.js"></script>
-      <script src="app/contact/contact.js"></script>
-      <script src="app/country/country.controller.js"></script>
-      <script src="app/country/country.js"></script>
-      <script src="app/coupon/coupon.controller.js"></script>
-      <script src="app/coupon/coupon.js"></script>
-      <script src="app/customer/customer.controller.js"></script>
-      <script src="app/customer/customer.js"></script>
-      <script src="app/dashboard/dashboard.controller.js"></script>
-      <script src="app/dashboard/dashboard.js"></script>
-      <script src="app/documentation/documentation.controller.js"></script>
-      <script src="app/documentation/documentation.js"></script>
-      <script src="app/feature/feature.controller.js"></script>
-      <script src="app/feature/feature.js"></script>
-      <script src="app/keyfeature/keyfeature.controller.js"></script>
-      <script src="app/keyfeature/keyfeature.js"></script>
-      <script src="app/main/campaign.controller.js"></script>
-      <script src="app/main/main.controller.js"></script>
-      <script src="app/main/main.js"></script>
-      <script src="app/main/single.controller.js"></script>
-      <script src="app/media/media.controller.js"></script>
-      <script src="app/media/media.js"></script>
-      <script src="app/medias/medias.controller.js"></script>
-      <script src="app/medias/medias.js"></script>
-      <script src="app/order/order.controller.js"></script>
-      <script src="app/order/order.js"></script>
-      <script src="app/orders/orders.controller.js"></script>
-      <script src="app/orders/orders.js"></script>
-      <script src="app/payment-method/payment-method.controller.js"></script>
-      <script src="app/payment-method/payment-method.js"></script>
-      <script src="app/payment/payment.controller.js"></script>
-      <script src="app/payment/payment.js"></script>
-      <script src="app/product-efficiency/product-efficiency.controller.js"></script>
-      <script src="app/product-efficiency/product-efficiency.js"></script>
-      <script src="app/product/detail.controller.js"></script>
-      <script src="app/product/list.controller.js"></script>
-      <script src="app/product/main.controller.js"></script>
-      <script src="app/product/product.controller.js"></script>
-      <script src="app/product/product.js"></script>
-      <script src="app/products-orders/products-orders.controller.js"></script>
-      <script src="app/products-orders/products-orders.js"></script>
-      <script src="app/regional-sales/regional-sales.controller.js"></script>
-      <script src="app/regional-sales/regional-sales.js"></script>
-      <script src="app/review/review.controller.js"></script>
-      <script src="app/review/review.js"></script>
-      <script src="app/reviews/reviews.controller.js"></script>
-      <script src="app/reviews/reviews.js"></script>
-      <script src="app/settings.js"></script>
-      <script src="app/shipping/shipping.controller.js"></script>
-      <script src="app/shipping/shipping.js"></script>
-      <script src="app/statistic/statistic.controller.js"></script>
-      <script src="app/statistic/statistic.js"></script>
-      <script src="app/wish/wish.controller.js"></script>
-      <script src="app/wish/wish.js"></script>
-      <script src="components/angular-pintura/angular-pintura.js"></script>
-      <script src="components/auth/auth.service.js"></script>
-      <script src="components/auth/interceptor.service.js"></script>
-      <script src="components/auth/router.decorator.js"></script>
-      <script src="components/auth/user.service.js"></script>
-      <script src="components/calendar/calendar.directive.js"></script>
-      <script src="components/cart-buttons/cart-buttons.component.js"></script>
-      <script src="components/crud-table/crud-table.js"></script>
-      <script src="components/crud-table/detail.controller.js"></script>
-      <script src="components/crud-table/list.controller.js"></script>
-      <script src="components/crud-table/main.controller.js"></script>
-      <script src="components/crud-table/main.js"></script>
-      <script src="components/directives/directive.directive.js"></script>
-      <script src="components/factory/cart.service.js"></script>
-      <script src="components/factory/factory.service.js"></script>
-      <script src="components/filters/filters.filter.js"></script>
-      <script src="components/footer/footer.directive.js"></script>
-      <script src="components/left-menu/left-menu.controller.js"></script>
-      <script src="components/left-menu/left-menu.directive.js"></script>
-      <script src="components/left-menu/left-menu.service.js"></script>
-      <script src="components/list-image/list-image.directive.js"></script>
-      <script src="components/lodash/lodash.service.js"></script>
-      <script src="components/login-modal/modal.service.js"></script>
-      <script src="components/mdPicker/mdPickers.js"></script>
-      <script src="components/mdPicker/mdPickers.min.js"></script>
-      <script src="components/modal/modal.service.js"></script>
-      <script src="components/mongoose-error/mongoose-error.directive.js"></script>
-      <script src="components/navbar-public/navbar-public.controller.js"></script>
-      <script src="components/navbar-public/navbar-public.directive.js"></script>
-      <script src="components/navbar/navbar.controller.js"></script>
-      <script src="components/navbar/navbar.directive.js"></script>
-      <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
-      <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
-      <script src="components/rating/rating.component.js"></script>
-      <script src="components/remote-unique/remote-unique.directive.js"></script>
-      <script src="components/repeat-input/repeat-input.directive.js"></script>
-      <script src="components/right-menu/right-menu.controller.js"></script>
-      <script src="components/right-menu/right-menu.js"></script>
-      <script src="components/socket/socket.service.js"></script>
-      <script src="components/submit-button/submit-button.component.js"></script>
-      <script src="components/toast/toast.service.js"></script>
-      <script src="components/toggle-component/toggle-component.directive.js"></script>
-      <script src="components/toggle-component/toggle-component.service.js"></script>
-      <script src="components/top-menu/top-menu.directive.js"></script>
-      <script src="components/top-menu/topmenu.controller.js"></script>
-      <script src="components/user-avatar/user-avatar.directive.js"></script>
-      <script src="components/util/util.service.js"></script>
-      <script src="components/video-modal/jquery.backstretch.js"></script>
-      <script src="components/video-modal/jquery.backstretch.min.js"></script>
-      <script src="components/video-modal/scripts.js"></script>
-      <script src="components/wish/wish.component.js"></script>
-      <script src="content/dataviz/map/js/chroma.min.js"></script>
-      <script src="kendoui/scripts/jszip.min.js"></script>
-      <script src="kendoui/scripts/kendo.all.min.js"></script>
-      <script src="kendoui/scripts/pako_deflate.min.js"></script>
-      <!-- endinjector -->
-    <!-- endbuild -->
-	
-	 <script src="kendoui/scripts/jszip.min.js"></script>
-      <script src="kendoui/scripts/kendo.all.min.js"></script>
-      <script src="kendoui/scripts/pako_deflate.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <script src="resources/angular/angular.js" type="text/javascript"></script>
+      <script src="resources/angular-resource/angular-resource.js" type="text/javascript"></script>
+      <script src="resources/angular-cookies/angular-cookies.js" type="text/javascript"></script>
+      <script src="resources/angular-sanitize/angular-sanitize.js" type="text/javascript"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="resources/lodash/lodash.js" type="text/javascript"></script>
+      <script src="resources/angular-socket-io/socket.js" type="text/javascript"></script>
+      <script src="resources/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+      <script src="content/angular-validation-match.min.js" type="text/javascript"></script>
+      <script src="resources/angular-animate/angular-animate.js" type="text/javascript"></script>
+      <script src="resources/angular-aria/angular-aria.js" type="text/javascript"></script>
+      <script src="resources/angular-messages/angular-messages.js" type="text/javascript"></script>
+      <script src="resources/angular-material/angular-material.js" type="text/javascript"></script>
+      <script src="resources/moment/moment.js" type="text/javascript"></script>
+      <script src="resources/angular-moment/angular-moment.js" type="text/javascript"></script>
+      <script src="resources/angular-material-icons/angular-material-icons.min.js" type="text/javascript"></script>
+      <script src="resources/ngInfiniteScroll/build/ng-infinite-scroll.js" type="text/javascript"></script>
+      <script src="resources/blob-polyfill/Blob.js" type="text/javascript"></script>
+      <script src="resources/file-saver.js/FileSaver.js" type="text/javascript"></script>
+      <script src="content/angular-file-saver.bundle.js" type="text/javascript"></script>
+      <script src="resources/material-date-picker/build/mbdatepicker.js" type="text/javascript"></script>
+      <script src="content/angular-gettext.js" type="text/javascript"></script>
+      <script src="resources/ng-file-upload/ng-file-upload.js" type="text/javascript"></script>
+      <script src="resources/ng-file-upload-shim/ng-file-upload-shim.js" type="text/javascript"></script>
+      <script src="resources/spin.js/spin.js" type="text/javascript"></script>
+      <script src="resources/angular-loading/angular-loading.js" type="text/javascript"></script>
+      <script src="content/rzslider.js" type="text/javascript"></script>
+      <script src="content/angular-ui-tree.js" type="text/javascript"></script>
+      <script src="resources/odometer/odometer.js" type="text/javascript"></script>
+      <script src="content/angular-odometer.js" type="text/javascript"></script>
+      <script src="resources/smDateTimeRangePicker/src/picker.js" type="text/javascript"></script>
+      <script src="content/sweetalert.min.js" type="text/javascript"></script>
+      <script src="resources/ngSweetAlert/SweetAlert.js" type="text/javascript"></script>
+      <script src="resources/angular-base64-upload/src/angular-base64-upload.js" type="text/javascript"></script>
+      <script src="resources/angular-bootstrap-simple-chat/src/scripts/index.js" type="text/javascript"></script>
+      <script src="content/angular-simple-chat.min.js" type="text/javascript"></script>
+      <script src="resources/angular-touch/angular-touch.js" type="text/javascript"></script>
+      <script src="resources/venturocket-angular-slider/build/angular-slider.js" type="text/javascript"></script>
+      <script src="resources/datetimeRangePicker/range-picker.js" type="text/javascript"></script>
+      <script src="content/sweetalert2.js" type="text/javascript"></script>
+      <script src="content/Chart.js" type="text/javascript"></script>
+      <script src="content/angular-chart.js" type="text/javascript"></script>
+      <script src="resources/ng-onload/release/ng-onload.js" type="text/javascript"></script>
+      <script src="content/fullcalendar.js" type="text/javascript"></script>
+      <script src="resources/angular-ui-calendar/src/calendar.js" type="text/javascript"></script>
+      <script src="resources/angular-bootstrap/ui-bootstrap-tpls.js" type="text/javascript"></script>
+      <script src="resources/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+      <script src="resources/angular-daterangepicker/js/angular-daterangepicker.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+      <script src="app/app.js" type="text/javascript"></script>
+      <script src="app/admin/admin.module.js" type="text/javascript"></script>
+      <script src="components/auth/auth.module.js" type="text/javascript"></script>
+      <script src="components/util/util.module.js" type="text/javascript"></script>
+      <script src="app/about/about.js" type="text/javascript"></script>
+      <script src="app/account/account.js" type="text/javascript"></script>
+      <script src="app/account/cp/cp.controller.js" type="text/javascript"></script>
+      <script src="app/account/login/login.controller.js" type="text/javascript"></script>
+      <script src="app/account/password/password.controller.js" type="text/javascript"></script>
+      <script src="app/account/signup/signup.controller.js" type="text/javascript"></script>
+      <script src="app/address/address.controller.js" type="text/javascript"></script>
+      <script src="app/address/address.js" type="text/javascript"></script>
+      <script src="app/admin/admin.controller.js" type="text/javascript"></script>
+      <script src="app/admin/admin.router.js" type="text/javascript"></script>
+      <script src="app/app.constant.js" type="text/javascript"></script>
+      <script src="app/book/book.controller.js" type="text/javascript"></script>
+      <script src="app/book/book.js" type="text/javascript"></script>
+      <script src="app/brand/brand.controller.js" type="text/javascript"></script>
+      <script src="app/brand/brand.js" type="text/javascript"></script>
+      <script src="app/brandmg/brandmg.controller.js" type="text/javascript"></script>
+      <script src="app/brandmg/brandmg.js" type="text/javascript"></script>
+      <script src="app/brandtv/brandtv.controller.js" type="text/javascript"></script>
+      <script src="app/brandtv/brandtv.js" type="text/javascript"></script>
+      <script src="app/campaign/campaign.controller.js" type="text/javascript"></script>
+      <script src="app/campaign/campaign.js" type="text/javascript"></script>
+      <script src="app/campaign/campaignCompleted.controller.js" type="text/javascript"></script>
+      <script src="app/campaign/campaignRunning.controller.js" type="text/javascript"></script>
+      <script src="app/campaign/campaignScheduled.controller.js" type="text/javascript"></script>
+      <script src="app/campaigns/calendar.controller.js" type="text/javascript"></script>
+      <script src="app/campaigns/campaigns.controller.js" type="text/javascript"></script>
+      <script src="app/campaigns/campaigns.js" type="text/javascript"></script>
+      <script src="app/campaigns/campaignsCompleted.controller.js" type="text/javascript"></script>
+      <script src="app/campaigns/campaignsRunning.controller.js" type="text/javascript"></script>
+      <script src="app/campaigns/campaignsScheduled.controller.js" type="text/javascript"></script>
+      <script src="app/cart/cart.controller.js" type="text/javascript"></script>
+      <script src="app/cart/cart.js" type="text/javascript"></script>
+      <script src="app/category/category.controller.js" type="text/javascript"></script>
+      <script src="app/category/category.js" type="text/javascript"></script>
+      <script src="app/category/detail.controller.js" type="text/javascript"></script>
+      <script src="app/category/list.controller.js" type="text/javascript"></script>
+      <script src="app/category/main.controller.js" type="text/javascript"></script>
+      <script src="app/checkout/checkout.controller.js" type="text/javascript"></script>
+      <script src="app/checkout/checkout.js" type="text/javascript"></script>
+      <script src="app/contact/contact.controller.js" type="text/javascript"></script>
+      <script src="app/contact/contact.js" type="text/javascript"></script>
+      <script src="app/country/country.controller.js" type="text/javascript"></script>
+      <script src="app/country/country.js" type="text/javascript"></script>
+      <script src="app/coupon/coupon.controller.js" type="text/javascript"></script>
+      <script src="app/coupon/coupon.js" type="text/javascript"></script>
+      <script src="app/customer/customer.controller.js" type="text/javascript"></script>
+      <script src="app/customer/customer.js" type="text/javascript"></script>
+      <script src="app/dashboard/dashboard.controller.js" type="text/javascript"></script>
+      <script src="app/dashboard/dashboard.js" type="text/javascript"></script>
+      <script src="app/documentation/documentation.controller.js" type="text/javascript"></script>
+      <script src="app/documentation/documentation.js" type="text/javascript"></script>
+      <script src="app/feature/feature.controller.js" type="text/javascript"></script>
+      <script src="app/feature/feature.js" type="text/javascript"></script>
+      <script src="app/keyfeature/keyfeature.controller.js" type="text/javascript"></script>
+      <script src="app/keyfeature/keyfeature.js" type="text/javascript"></script>
+      <script src="app/main/campaign.controller.js" type="text/javascript"></script>
+      <script src="app/main/main.controller.js" type="text/javascript"></script>
+      <script src="app/main/main.js" type="text/javascript"></script>
+      <script src="app/main/single.controller.js" type="text/javascript"></script>
+      <script src="app/media/media.controller.js" type="text/javascript"></script>
+      <script src="app/media/media.js" type="text/javascript"></script>
+      <script src="app/medias/medias.controller.js" type="text/javascript"></script>
+      <script src="app/medias/medias.js" type="text/javascript"></script>
+      <script src="app/order/order.controller.js" type="text/javascript"></script>
+      <script src="app/order/order.js" type="text/javascript"></script>
+      <script src="app/orders/orders.controller.js" type="text/javascript"></script>
+      <script src="app/orders/orders.js" type="text/javascript"></script>
+      <script src="app/payment-method/payment-method.controller.js" type="text/javascript"></script>
+      <script src="app/payment-method/payment-method.js" type="text/javascript"></script>
+      <script src="app/payment/payment.controller.js" type="text/javascript"></script>
+      <script src="app/payment/payment.js" type="text/javascript"></script>
+      <script src="app/product-efficiency/product-efficiency.controller.js" type="text/javascript"></script>
+      <script src="app/product-efficiency/product-efficiency.js" type="text/javascript"></script>
+      <script src="app/product/detail.controller.js" type="text/javascript"></script>
+      <script src="app/product/list.controller.js" type="text/javascript"></script>
+      <script src="app/product/main.controller.js" type="text/javascript"></script>
+      <script src="app/product/product.controller.js" type="text/javascript"></script>
+      <script src="app/product/product.js" type="text/javascript"></script>
+      <script src="app/products-orders/products-orders.controller.js" type="text/javascript"></script>
+      <script src="app/products-orders/products-orders.js" type="text/javascript"></script>
+      <script src="app/regional-sales/regional-sales.controller.js" type="text/javascript"></script>
+      <script src="app/regional-sales/regional-sales.js" type="text/javascript"></script>
+      <script src="app/review/review.controller.js" type="text/javascript"></script>
+      <script src="app/review/review.js" type="text/javascript"></script>
+      <script src="app/reviews/reviews.controller.js" type="text/javascript"></script>
+      <script src="app/reviews/reviews.js" type="text/javascript"></script>
+      <script src="app/settings.js" type="text/javascript"></script>
+      <script src="app/shipping/shipping.controller.js" type="text/javascript"></script>
+      <script src="app/shipping/shipping.js" type="text/javascript"></script>
+      <script src="app/statistic/statistic.controller.js" type="text/javascript"></script>
+      <script src="app/statistic/statistic.js" type="text/javascript"></script>
+      <script src="app/wish/wish.controller.js" type="text/javascript"></script>
+      <script src="app/wish/wish.js" type="text/javascript"></script>
+      <script src="components/angular-pintura/angular-pintura.js" type="text/javascript"></script>
+      <script src="components/auth/auth.service.js" type="text/javascript"></script>
+      <script src="components/auth/interceptor.service.js" type="text/javascript"></script>
+      <script src="components/auth/router.decorator.js" type="text/javascript"></script>
+      <script src="components/auth/user.service.js" type="text/javascript"></script>
+      <script src="components/calendar/calendar.directive.js" type="text/javascript"></script>
+      <script src="components/cart-buttons/cart-buttons.component.js" type="text/javascript"></script>
+      <script src="components/crud-table/crud-table.js" type="text/javascript"></script>
+      <script src="components/crud-table/detail.controller.js" type="text/javascript"></script>
+      <script src="components/crud-table/list.controller.js" type="text/javascript"></script>
+      <script src="components/crud-table/main.controller.js" type="text/javascript"></script>
+      <script src="components/crud-table/main.js" type="text/javascript"></script>
+      <script src="components/directives/directive.directive.js" type="text/javascript"></script>
+      <script src="components/factory/cart.service.js" type="text/javascript"></script>
+      <script src="components/factory/factory.service.js" type="text/javascript"></script>
+      <script src="components/filters/filters.filter.js" type="text/javascript"></script>
+      <script src="components/footer/footer.directive.js" type="text/javascript"></script>
+      <script src="components/left-menu/left-menu.controller.js" type="text/javascript"></script>
+      <script src="components/left-menu/left-menu.directive.js" type="text/javascript"></script>
+      <script src="components/left-menu/left-menu.service.js" type="text/javascript"></script>
+      <script src="components/list-image/list-image.directive.js" type="text/javascript"></script>
+      <script src="components/lodash/lodash.service.js" type="text/javascript"></script>
+      <script src="components/login-modal/modal.service.js" type="text/javascript"></script>
+      <script src="components/mdPicker/mdPickers.js" type="text/javascript"></script>
+      <script src="components/mdPicker/mdPickers.min.js" type="text/javascript"></script>
+      <script src="components/modal/modal.service.js" type="text/javascript"></script>
+      <script src="components/mongoose-error/mongoose-error.directive.js" type="text/javascript"></script>
+      <script src="components/navbar-public/navbar-public.controller.js" type="text/javascript"></script>
+      <script src="components/navbar-public/navbar-public.directive.js" type="text/javascript"></script>
+      <script src="components/navbar/navbar.controller.js" type="text/javascript"></script>
+      <script src="components/navbar/navbar.directive.js" type="text/javascript"></script>
+      <script src="components/oauth-buttons/oauth-buttons.controller.js" type="text/javascript"></script>
+      <script src="components/oauth-buttons/oauth-buttons.directive.js" type="text/javascript"></script>
+      <script src="components/rating/rating.component.js" type="text/javascript"></script>
+      <script src="components/remote-unique/remote-unique.directive.js" type="text/javascript"></script>
+      <script src="components/repeat-input/repeat-input.directive.js" type="text/javascript"></script>
+      <script src="components/right-menu/right-menu.controller.js" type="text/javascript"></script>
+      <script src="components/right-menu/right-menu.js" type="text/javascript"></script>
+      <script src="components/socket/socket.service.js" type="text/javascript"></script>
+      <script src="components/submit-button/submit-button.component.js" type="text/javascript"></script>
+      <script src="components/toast/toast.service.js" type="text/javascript"></script>
+      <script src="components/toggle-component/toggle-component.directive.js" type="text/javascript"></script>
+      <script src="components/toggle-component/toggle-component.service.js" type="text/javascript"></script>
+      <script src="components/top-menu/top-menu.directive.js" type="text/javascript"></script>
+      <script src="components/top-menu/topmenu.controller.js" type="text/javascript"></script>
+      <script src="components/user-avatar/user-avatar.directive.js" type="text/javascript"></script>
+      <script src="components/util/util.service.js" type="text/javascript"></script>
+      <script src="components/video-modal/jquery.backstretch.js" type="text/javascript"></script>
+      <script src="components/video-modal/jquery.backstretch.min.js" type="text/javascript"></script>
+      <script src="components/video-modal/scripts.js" type="text/javascript"></script>
+      <script src="components/wish/wish.component.js" type="text/javascript"></script>
+      <script src="content/dataviz/map/js/chroma.min.js" type="text/javascript"></script>
+      <script src="kendoui/scripts/jszip.min.js" type="text/javascript"></script>
+      <script src="kendoui/scripts/kendo.all.min.js" type="text/javascript"></script>
+      <script src="kendoui/scripts/pako_deflate.min.js" type="text/javascript"></script>
+	 <script src="kendoui/scripts/jszip.min.js" type="text/javascript"></script>
+      <script src="kendoui/scripts/kendo.all.min.js" type="text/javascript"></script>
+      <script src="kendoui/scripts/pako_deflate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
- 
-
-
 <!-- Include Date Range Picker -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
    
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/0.5.7/chroma.min.js"></script>
-       <script type="text/javascript" src="https://cdn.rawgit.com/konvajs/konva/1.2.2/konva.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/0.5.7/chroma.min.js" type="text/javascript"></script>
+       <script type="text/javascript" src="https://cdn.rawgit.com/konvajs/konva/1.2.2/konva.min.js" type="text/javascript"></script>
     
   </body>
 </html>
