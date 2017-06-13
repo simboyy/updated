@@ -22,6 +22,8 @@ angular.module('mediaboxApp')
         <div class="flexbox-container">
         	<div>
             <img ng-if="img.type==='image/png'" ng-src="{{img.path}}" draggable="false" alt="{{img.name}}" class="detail-image"/>
+            <img ng-if="img.type==='image/jpeg'" ng-src="{{img.path}}" draggable="false" alt="{{img.name}}" class="detail-image"/>
+            <img ng-if="img.type==='image/gif'" ng-src="{{img.path}}" draggable="false" alt="{{img.name}}" class="detail-image"/>
             <audio ng-if="img.type==='audio/mp3'" controls ng-src="{{img.path}}"></audio>
             <video ng-if="img.type==='video/mp4'" controls >
               <source ng-src="{{img.path}}" type="video/mp4">
