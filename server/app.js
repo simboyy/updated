@@ -42,6 +42,8 @@ if (_environment2.default.seedDB) {
 }
 
 // Setup server
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var app = (0, _express2.default)();
 var server = _http2.default.createServer(app);
 var socketio = require('socket.io')(server, {
@@ -54,7 +56,7 @@ require('./routes').default(app);
 
 // Start server
 function startServer() {
-  app.angularFullstack = server.listen(process.env.OPENSHIFT_NODEJS_PORT, function () {
+  app.angularFullstack = server.listen(port, ipaddress, function () {
     console.log('Express server listening on %d, in %s mode', process.env.OPENSHIFT_NODEJS_PORT, app.get('env'));
   });
 }
