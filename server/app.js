@@ -54,8 +54,8 @@ require('./routes').default(app);
 
 // Start server
 function startServer() {
-  app.angularFullstack = server.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, function () {
-    console.log('Express server listening on %d, in %s mode', _environment2.default.port, app.get('env'));
+  app.angularFullstack = server.listen(process.env.OPENSHIFT_NODEJS_PORT, function () {
+    console.log('Express server listening on %d, in %s mode', process.env.OPENSHIFT_NODEJS_PORT, app.get('env'));
   });
 }
 
