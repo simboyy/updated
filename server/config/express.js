@@ -68,6 +68,11 @@ exports.default = function (app) {
     }));
   }
   
+  app.use( function( req, res, next ) {
+    res.cookie('XSRF-TOKEN', res.locals._csrf );
+  next();
+  });
+  
 
   if ('development' === env) {
     app.use(require('connect-livereload')({
