@@ -53,7 +53,7 @@ exports.default = function (app) {
    * https://github.com/krakenjs/lusca
    */
   
-  if (env !== 'test' && !process.env.SAUCE_USERNAME && 'development' !== env) {
+  if (env !== 'test' && 'development' !== env) {
     app.use((0, _lusca2.default)({
       csrf: {
         angular: false
