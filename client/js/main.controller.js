@@ -1,0 +1,1 @@
+'use strict';(function(){function CategoriesMainController(Modal,$stateParams){}angular.module('mediaboxApp').controller('CategoriesMainController',CategoriesMainController);})();
