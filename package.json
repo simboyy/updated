@@ -207,7 +207,8 @@
   "scripts": {
     "test": "gulp test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start": "gulp serve"
+    "start": "node server",
+    "postinstall": "gulp serve"
   },
   "private": true
 }
