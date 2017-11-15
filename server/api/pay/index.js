@@ -306,15 +306,15 @@ router.get('/prepare', function (req, res) {
             var PS_AWAITING_DELIVERY_2 = "Awaiting+Delivery";
             var PS_DELIVERED = "delivered";
             var PS_AWAITING_REDIRECT = "awaiting redirect";
-            var SITE_URL = "http://app.mediabox.co.zw";
+            var SITE_URL = "http://advertising.mediabox.co.zw";
 
             paynowJSONObject = {
                 id: 3100,
                 reference: orderNo,
                 amount: total,
                 additionalInfo: '',
-                returnUrl: 'http://app.mediabox.co.zw/api/pay/gettingbackfrompaynow',
-                resulturl: 'http://app.mediabox.co.zw/api/pay/paynowupdatingus',
+                returnUrl: 'http://advertising.mediabox.co.zw/api/pay/gettingbackfrompaynow',
+                resulturl: 'http://advertising.mediabox.co.zw/api/pay/paynowupdatingus',
                 authemail: '',
                 status: 'message'
 
@@ -459,7 +459,7 @@ router.get('/gettingbackfrompaynow', function (req, res) {
             var PS_AWAITING_DELIVERY_2 = "Awaiting+Delivery";
             var PS_DELIVERED = "delivered";
             var PS_AWAITING_REDIRECT = "awaiting redirect";
-            var SITE_URL = "http://app.mediabox.co.zw";
+            var SITE_URL = "http://advertising.mediabox.co.zw";
 
     _order2.default.findOne({}).sort('-created_at').exec().then(function (doc) {
 
@@ -562,7 +562,7 @@ router.get('/paynowupdatingus', function (req, res) {
     var PS_AWAITING_DELIVERY = "awaiting delivery";
     var PS_DELIVERED = "delivered";
     var PS_AWAITING_REDIRECT = "awaiting redirect";
-    var SITE_URL = "http://app.mediabox.co.zw";
+    var SITE_URL = "http://advertising.mediabox.co.zw";
 
     var paymentId = res.body.paynowreference;
     var pollurl = res.body.pollurl;
