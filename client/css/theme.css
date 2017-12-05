@@ -12,7 +12,7 @@ button i.fa{margin:0 5px;}
 .clickable{cursor:pointer;}
 p.lead{font-weight:300;}
 h1{font-weight:700;font-size:40px;}
-#top{background:#555555;padding:10px 0;}
+#top{background:#555555;padding:0px 0;}
 #top .offer{color:#fff;}
 #top .offer .btn{text-transform:uppercase;}
 @media (max-width:991px){#top .offer{margin-bottom:10px;}
