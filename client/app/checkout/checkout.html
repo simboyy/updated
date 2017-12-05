@@ -227,24 +227,8 @@
 			<div ng-messages="form.city.$error" ng-if="form.city.$dirty">
 				<div ng-message="required">City is required</div>
 			</div>
-		</md-input-container>
-
-        <md-input-container md-is-error="(form.zip.$error.required || form.zip.$error.zip) && form.zip.$dirty">
-			<label>Zip</label>
-			<input name="zip" type="zip" ng-model="checkout.addr.zip" required only-numbers/>
-			<div ng-messages="form.zip.$error" ng-if="form.zip.$dirty">
-				<div ng-message="required">Zip code is required</div>
-			</div>
-		</md-input-container>
-        
-        <md-input-container md-is-error="(form.state.$error.required || form.state.$error.state) && form.state.$dirty">
-			<label>State</label>
-			<input name="state" type="state" ng-model="checkout.addr.state" required/>
-			<div ng-messages="form.state.$error" ng-if="form.state.$dirty">
-				<div ng-message="required">State is required</div>
-			</div>
-		</md-input-container>
-        
+		</md-input-container>    
+         
         <md-input-container md-is-error="(form.phone.$error.required || form.phone.$error.phone) && form.phone.$dirty">
 			<label>Phone</label>
 			<input name="phone" type="phone" ng-model="checkout.addr.phone" required/>
