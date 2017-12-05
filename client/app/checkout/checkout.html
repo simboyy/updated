@@ -18,9 +18,8 @@
 <md-card>
       <md-card-header>
           <md-card-header-text>
-            <h3>PROCESS ORDER</h3>
+            <h4>PROCESS ORDER</h4>        
             
-            <span class="md-subhead" ></span>
           </md-card-header-text>
           
       </md-card-header>
@@ -84,36 +83,7 @@
                              </label>
                         </div>
                        </div>
-                        <div class="row">
-                        <div class="col-md-6 short">
-                            <div class="payment-logo">
-                              <img width="200px"  height="60px" data-ng-src="./assets/images/flocash.png" alt="">
-                            </div>
-                           <label class="payment-label" for="r1">
-                                                      
-                                <div class="payment-selector" id="isNotMasterCard">
-                                    <!--<input type="radio" name="payment_method_id"   ng-model="checkout.options.paymentMethod.name" value="FloCash" id="r1">--> 
-                                </div>
-                                <span class="payment-type-name">FloCash(coming soon)</span>
-                                              
-                                                      
-                              </label>
-                        </div>
-                        <div class="col-md-6 short">
-                            <div class="payment-logo">
-                              <img width="200px"  height="60px" data-ng-src="./assets/images/Stripe.png" alt="">
-                            </div>
-                            <label class="payment-label" for="r1">
-                                                        
-                                <div class="payment-selector" id="isNotMasterCard">
-                                   <!-- <input type="radio" name="payment_method_id"  ng-model="checkout.options.paymentMethod.name"  value="Stripe" id="r1">--> 
-                                </div>
-                                <span class="payment-type-name">Stripe(coming soon)</span>
-                                                
-                                                        
-                            </label>
-                        </div>
-                       </div>
+                        
                 
                     </div><div ng-messages="orderForm.paymentMethod.name.$error" ng-if="orderForm.paymentMethod.name.$dirty">
                         <div ng-message="required">Payment Method is required</div>
@@ -188,7 +158,7 @@
 			</tr>
             <tr class="md-table-content-row">
 	
-				<td><h3>Discount Coupon:</h3></td>
+				<td><h4>Discount Coupon:</h4></td>
 			    <td>
                     <md-input-container md-is-error="(form.name.$error.required || form.name.$error.name) && form.name.$dirty" md-no-float>
                         <input name="coupon" type="text" ng-model="checkout.options.coupon" ng-change="checkout.checkCoupon(checkout.options.coupon, checkout.Cart.cart.getTotalPrice())"
