@@ -21,7 +21,7 @@
       </md-menu-item>
 
 <!-- // Admin Pages -->;
-      <md-subheader ng-if="topmenu.isLoggedIn()">&nbsp</md-subheader>
+      <md-subheader ng-if="topmenu.isLoggedIn()">My Mediabox</md-subheader>
       <md-menu-item ng-repeat="item in topmenu.menu.pages" ui-sref-active="active" ng-if="topmenu.isLoggedIn() && item.authenticate && topmenu.hasRole(item.role)" ui-sref="{{item.url}}">
         <md-button aria-label="{{item.text}}">
           <ng-md-icon icon="{{item.icon}}" md-menu-align-target></ng-md-icon>
