@@ -59,15 +59,11 @@
                                 <br><a ng-href="http://{{product.website}}"> {{product.website}}</a>
                                 <div style="margin: 7px">
                                     <ol class="rounded-list">
-                                        <li ng-repeat="f in product.stats"><a href="#">{{f.key}} : {{f.val}}</a></li>
+                                        <li ng-repeat="f in product.stats |limitTo :3"><a href="#">{{f.key}} : {{f.val}}</a></li>
                                     </ol>
                                 </div>
                             </div>
-                            <div style="text-align:bottom;vertical-align: bottom;text-align: center;margin-bottom: 0px">
-                                <span><small>Category:<a href="/Category/{{product.category.slug}}/{{product.category._id}}">{{product.endDate}}</a></small>
-                      
-                     </span>
-                            </div>
+                            
                             <!-- /.text -->
                         </div>
                         <!-- /.product -->
