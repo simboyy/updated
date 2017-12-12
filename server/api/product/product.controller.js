@@ -14,6 +14,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.index = index;
 exports.show = show;
+exports.pubProducts = pubProducts;
 exports.create = create;
 exports.update = update;
 exports.destroy = destroy;
