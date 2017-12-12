@@ -63,7 +63,7 @@ function ProductsListController($scope, $http, socket, $state, $mdDialog, $state
 
   // Start query the database for products
   vm.loading = true;
-  $http.get('/api/products').then(function(res) {
+  $http.get('/api/products/products').then(function(res) {
     vm.loading = false;
     vm.data = res.data;
     socket.syncUpdates('product', vm.data);
