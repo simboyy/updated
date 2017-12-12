@@ -151,7 +151,13 @@ function index(req, res) {
 function show(req, res) {
   return _product2.default.findById(req.params.id).populate({ path: 'brand' }).populate({ path: 'category' }).exec().then(handleEntityNotFound(res)).then(respondWithResult(res)).catch(handleError(res));
 }
+//Gets publisher products
 
+// Get all orders for a publisher
+function pubProducts(req, res) {
+   return _product2.default.find({ 'uid': req.user.email }).exec().then(respondWithResult(res)).catch(handleError(res));
+ 
+}
 // Creates a new Product in the DB
 function create(req, res) {
   req.body.uid = req.user.email; // id change on every login hence email is used
