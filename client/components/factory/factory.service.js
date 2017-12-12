@@ -6,6 +6,7 @@ angular.module('mediaboxApp')
     obj = $resource('/api/products/:id', null, {'update': { method:'PUT' } });
     obj.count = $resource('/api/products/count');
     obj.pr = $resource('/api/products/priceRange');
+    obj.pub = $resource('/api/products/products', null, {'update': { method:'PUT' }});
     return obj;
 }])
 
